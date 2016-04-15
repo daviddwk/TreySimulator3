@@ -16,6 +16,9 @@ Dependencies required for Linux and others include
 * liblua5.3
 
 # How to help make TS3
-To help out I would first recommend learning the basics of [Lua][http://www.lua.org/manual/5.3/]. It is a very simple language and a good introduction to programming as a whole. This is because Lua has near English syntax
+To help out I would first recommend learning the basics of [Lua][]. It is a very simple language and a good introduction to programming as a whole. This is because Lua has near English syntax
 Reading the BullyEngine documentation will be very helpful when it is written and available.
-Finally, feel free to get in contact by messaging me, emailing me, or hopping on mumble over at [cloud.karagory.com][cloud.karagory.com]
+Finally, feel free to get in contact by messaging me, emailing me, or hopping on mumble over at [cloud.karagory.com][]
+
+[Lua]:http://www.lua.org/manual/5.3/
+[cloud.karagory.com]:cloud.karagory.com
