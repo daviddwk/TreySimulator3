@@ -7,6 +7,8 @@ function create(x, y)
   return entity
 end
 
+timeScored = 0
+
 function update(entity)
   setEntityDeltaY(entity, getEntityDeltaY(entity) + (getDeltaTime() * getGlobalValue("gravitySpeed")))
   if entityXMovementCollidesWithGroup(entity, 0, "CollisionBlocks", 0) or entityXMovementCollidesWithGroup(entity, 0, "basketBallHoop", 0) or entityXMovementCollidesWithGroup(entity, 0, "basketBallHoop", 1) then
@@ -19,7 +21,14 @@ function update(entity)
     setEntityDeltaX(entity, -getEntityDeltaX(entity))
     setEntityDeltaY(entity, -getEntityDeltaY(entity))
   end
-  if entityStaticCollidesWithGroup(entity, 0, "basketBallHoop", 2)  and getEntityDeltaY(entity) < 0 then
+  if timeScored > 0 then
+    timeScored = timeScored - getDeltaTime()
+  end
+  if entityStaticCollidesWithGroup(entity, 0, "basketBallHoop", 2)  and getEntityDeltaY(entity) > 0 then
+    if timeScored <= 0 then
+      print("score")
+      timeScored = 1
+    end
   end
 end
 
