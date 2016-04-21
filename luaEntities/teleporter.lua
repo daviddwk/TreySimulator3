@@ -1,4 +1,4 @@
-function create(x, y, width, height, destinationX, destinationY, removeScreenLag) --the origin of teleporters and teleportees is in their bettem lelt rather than top
+function create(x, y, width, height, destinationX, destinationY, removeScreenLag)
 	entity = getNewEntity("baseLuaEntity")
 	setEntityLabel(entity, "teleporter")
 	setEntityX(entity, x)

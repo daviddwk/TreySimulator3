@@ -54,7 +54,7 @@ end
 function useHandle(pressed)
 	if pressed then
 		player = getGlobalValue("player")
-		if entityStaticCollidesWithGroup(player, 0, "Teleporters", 0) then
+		if entityStaticCollidesWithGroup(player, 0, "Teleporters", 0) or entityStaticCollidesWithGroup(player, 0, "AnimatedTeleporters", 0)then
 			teleportedThisFrame = false
 			function teleport(teleporter)
 				if entityStaticCollidesWithEntity(player, 0, teleporter, 0) and teleportedThisFrame == false then
@@ -70,6 +70,7 @@ function useHandle(pressed)
 				end
 			end
 			forEachEntityInGroup("Teleporters", "teleport")
+			forEachEntityInGroup("AnimatedTeleporters", "teleport")
 		elseif getEntityValue(player, "holdingItem") ~= getNullEntity() then
 			callEntityFunction(getEntityValue(player, "holdingItem"), "action")
 		end
