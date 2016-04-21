@@ -60,7 +60,7 @@ function useHandle(pressed)
 				if entityStaticCollidesWithEntity(player, 0, teleporter, 0) and teleportedThisFrame == false then
 					teleportedThisFrame = true
 					setEntityX(player, getEntityValue(teleporter, "destinationX"))
-					setEntityY(player, getEntityValue(teleporter, "destinationY"))
+					setEntityY(player, getEntityValue(teleporter, "destinationY") - getAnimationHeight("treyStanding"))
 					if getEntityValue(teleporter, "removeScreenLag") == true then
 						setGlobalValue("xWanted", getEntityX(entity) - ((getScreenWidth() - getEntityRenderWidth(entity)) / 2))
 						setGlobalValue("yWanted", getEntityY(entity) - ((getScreenHeight() - getEntityRenderHeight(entity)) / 2) - (getScreenHeight() / 5))

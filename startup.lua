@@ -5,7 +5,6 @@ addGlobalValue("sizeMultiplier", "double")
 setGlobalValue("sizeMultiplier", 3)
 
 sizeMultiplier = getGlobalValue("sizeMultiplier")
-treyProportionalHeight = 35 --this variable is Trey's height in background pixels for easier math
 schoolHeight = 546
 schoolWidth = 2255
 
@@ -33,16 +32,20 @@ for j = 0,2 do
 end
 createEntity("object", 950 * sizeMultiplier, 432 * sizeMultiplier, "waterFountain", true, false)
 createEntity("object", 970 * sizeMultiplier, 432 * sizeMultiplier, "waterFountain", true, false)
-createEntity("teleporter", 1005 * sizeMultiplier, 282 * sizeMultiplier, 90 * sizeMultiplier, 150 * sizeMultiplier, 1047 * sizeMultiplier, (266 - treyProportionalHeight) * sizeMultiplier, false)--ramp
-createEntity("teleporter", 1005 * sizeMultiplier, 239 * sizeMultiplier, 90 * sizeMultiplier, 27 * sizeMultiplier, 1051 * sizeMultiplier, (432 - treyProportionalHeight) * sizeMultiplier, false)--ramp
+createEntity("teleporter", 1005 * sizeMultiplier, 432 * sizeMultiplier, 90 * sizeMultiplier, 150 * sizeMultiplier, 1047 * sizeMultiplier, 266 * sizeMultiplier, false)--ramp
+createEntity("teleporter", 1005 * sizeMultiplier, 266 * sizeMultiplier, 90 * sizeMultiplier, 27 * sizeMultiplier, 1051 * sizeMultiplier, 432 * sizeMultiplier, false)--ramp
 createEntity("item", 1127 * sizeMultiplier, 432 * sizeMultiplier, "pottedPlant")
 createEntity("object", 1768 * sizeMultiplier, 432 * sizeMultiplier, "waterFountain", true, false)
 createEntity("object", 1788 * sizeMultiplier, 432 * sizeMultiplier, "waterFountain", true, false)
 for i = 0,2 do
   createEntity("object", (1503 * sizeMultiplier) + (i * getAnimationWidth("trophyCase")) + (i * 100), (432 * sizeMultiplier), "trophyCase", true, false)
 end
+createEntity("basketBall", 2012 * sizeMultiplier, 412 * sizeMultiplier)
+createEntity("basketBall", 2012 * sizeMultiplier, 422 * sizeMultiplier)
 createEntity("basketBall", 2012 * sizeMultiplier, 432 * sizeMultiplier)
-createEntity("basketBallHoop", 1869 * sizeMultiplier, 336 * sizeMultiplier)
+createEntity("basketBallHoop", 1883 * sizeMultiplier, 336 * sizeMultiplier)
+createEntity("basketBallHoop", 2067 * sizeMultiplier, 336 * sizeMultiplier)
+
     --second hallway
 for i = 0,8 do
   createEntity("poster", 492 * sizeMultiplier, 188 * sizeMultiplier, 386 * sizeMultiplier, 41 * sizeMultiplier)
