@@ -2,7 +2,7 @@ function create(x, y, destinationX, destinationY, texture, removeScreenLag)
 	entity = getNewEntity("baseLuaEntity")
 	setEntityLabel(entity, "animatedTeleporter")
 	setEntityX(entity, x)
-	setEntityY(entity, y - getAnimationHeight(texture))
+	setEntityY(entity, y - getAnimationHeight(texture) + 1)
   setEntityRenderWidth(entity, getAnimationWidth(texture))
   setEntityRenderHeight(entity, getAnimationHeight(texture))
   startEntityAnimation(entity, texture)
@@ -13,9 +13,10 @@ function create(x, y, destinationX, destinationY, texture, removeScreenLag)
   setEntityValue(entity, "destinationY", destinationY)
   addEntityValue(entity, "removeScreenLag", "bool")
   setEntityValue(entity, "removeScreenLag", removeScreenLag)
-  addEntityToRenderGroup(entity, "AnimatedTeleporters")
-	addEntityToGroup(entity, "AnimatedTeleporters")
+  addEntityToRenderGroup(entity, "350Teleporters")
+  addEntityToGroup(entity, "Teleporters")
   return entity
 end
 
 --make it able to get enitity animation legnth and play entity animation before teleporting
+--move teleportation here

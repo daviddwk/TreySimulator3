@@ -6,13 +6,15 @@ function create(x, y)
 end
 
 function action(entity)
-  number = randPaul() % 3
+  number = randPaul() % 4
   if number == 0 then
     sticker = "sticker1"
   elseif number == 1 then
     sticker = "sticker2"
-  else
+  elseif number == 2 then
     sticker = "sticker3"
+  else
+    sticker = "sticker4"
   end
   stickerEntity = createEntity("object", getEntityX(entity) + (rand() % getAnimationWidth(sticker)), getEntityY(entity) + (rand() % getAnimationHeight(sticker)), sticker, false, false)
   removeEntityFromAllRenderGroups(stickerEntity)
