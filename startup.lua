@@ -11,103 +11,103 @@ playerEntity = createEntity("player", 224 * sizeMultiplier, 320 * sizeMultiplier
 setGlobalValue("player", playerEntity)
 
 --background textures
-createEntity("block", 0, 0, getAnimationWidth("school") * sizeMultiplier, getAnimationHeight("school") * sizeMultiplier, "school", false)
-createEntity("block", 0, 1000 * sizeMultiplier, getAnimationWidth("cafeteria") * sizeMultiplier, getAnimationHeight("cafeteria") * sizeMultiplier, "cafeteria", false)
+createEntity("animation", 0, 0, getAnimationWidth("school") * sizeMultiplier, getAnimationHeight("school") * sizeMultiplier, "school")
+createEntity("animation", 0, 1000 * sizeMultiplier, getAnimationWidth("cafeteria") * sizeMultiplier, getAnimationHeight("cafeteria") * sizeMultiplier, "cafeteria")
 
 --collisions
-  --main school
-    --horizontal
-createEntity("block", 100 * sizeMultiplier, 432 * sizeMultiplier, 2055 * sizeMultiplier, 16 * sizeMultiplier, "", true)--first floor
-createEntity("block", 476 * sizeMultiplier, 337 * sizeMultiplier, 529 * sizeMultiplier, 17 * sizeMultiplier, "", true)--first hallway ceiling left to right
-createEntity("block", 1095 * sizeMultiplier, 337 * sizeMultiplier, 99 * sizeMultiplier, 17 * sizeMultiplier, "", true)
-createEntity("block", 1471 * sizeMultiplier, 337 * sizeMultiplier, 368 * sizeMultiplier, 17 * sizeMultiplier, "", true)
-createEntity("block", 1178 * sizeMultiplier, 282 * sizeMultiplier, 309 * sizeMultiplier, 17 * sizeMultiplier, "", true)--library ceiling
-createEntity("block", 100 * sizeMultiplier, 266 * sizeMultiplier, 2055 * sizeMultiplier, 16 * sizeMultiplier, "", true)--second floor and some roof
-createEntity("block", 476 * sizeMultiplier, 171 * sizeMultiplier, 402 * sizeMultiplier, 17 * sizeMultiplier, "", true)--second hallway ceiling left to right
-createEntity("block", 1178 * sizeMultiplier, 171 * sizeMultiplier, 661 * sizeMultiplier, 17 * sizeMultiplier, "", true)
-createEntity("block", 862 * sizeMultiplier, 100 * sizeMultiplier, 332 * sizeMultiplier, 16 * sizeMultiplier, "", true)--small commons ceiling
-    --vertical
-createEntity("block", 100 * sizeMultiplier, 266 * sizeMultiplier, 16 * sizeMultiplier, 182 * sizeMultiplier, "", true)--pillar
-createEntity("block", 160 * sizeMultiplier, 266 * sizeMultiplier, 16 * sizeMultiplier, 129 * sizeMultiplier, "", true)--main commons wall left
-createEntity("block", 476 * sizeMultiplier, 171 * sizeMultiplier, 16 * sizeMultiplier, 224 * sizeMultiplier, "", true)--main commons wall left and second wall left
-createEntity("block", 989 * sizeMultiplier, 266 * sizeMultiplier, 16 * sizeMultiplier, 88 * sizeMultiplier, "", true)--ramp walls left to right
-createEntity("block", 1095 * sizeMultiplier, 266 * sizeMultiplier, 16 * sizeMultiplier, 88 * sizeMultiplier, "", true)
-createEntity("block", 1178 * sizeMultiplier, 266 * sizeMultiplier, 16 * sizeMultiplier, 129 * sizeMultiplier, "", true)--library walls left to right
-createEntity("block", 1471 * sizeMultiplier, 266 * sizeMultiplier, 16 * sizeMultiplier, 129 * sizeMultiplier, "", true)
-createEntity("block", 1823 * sizeMultiplier, 171 * sizeMultiplier, 16 * sizeMultiplier, 224 * sizeMultiplier, "", true)--gym wall left and second wall right
-createEntity("block", 2139 * sizeMultiplier, 266 * sizeMultiplier, 16 * sizeMultiplier, 182 * sizeMultiplier, "", true)--gym wall right
-createEntity("block", 862 * sizeMultiplier, 100 * sizeMultiplier, 16 * sizeMultiplier, 88 * sizeMultiplier, "", true)--small commons left to right
-createEntity("block", 1178 * sizeMultiplier, 100 * sizeMultiplier, 16 * sizeMultiplier, 88 * sizeMultiplier, "", true)
-createEntity("block", 1637 * sizeMultiplier, 171 * sizeMultiplier, 16 * sizeMultiplier, 58 * sizeMultiplier, "", true)--bathroom wall
-  --cafeteria
-createEntity("block", 0 * sizeMultiplier, (166 + 1000) * sizeMultiplier, 472 * sizeMultiplier, 16 *sizeMultiplier, "", true)--floor
-createEntity("block", 316 * sizeMultiplier, (71 + 1000) * sizeMultiplier, 156 * sizeMultiplier, 17 * sizeMultiplier, "", true)
-createEntity("block", 0 * sizeMultiplier, (0 + 1000) * sizeMultiplier, 472 * sizeMultiplier, 16 *sizeMultiplier, "", true)--roof
-createEntity("block", 0 * sizeMultiplier, (0 + 1000) * sizeMultiplier, 16 * sizeMultiplier, 129 * sizeMultiplier, "", true)
-createEntity("block", 316 * sizeMultiplier, (0 + 1000) * sizeMultiplier, 16 * sizeMultiplier, 129 * sizeMultiplier, "", true)
-createEntity("block", 456 * sizeMultiplier, (0 + 1000) * sizeMultiplier, 16 * sizeMultiplier, 182 * sizeMultiplier, "", true)
+    --main school
+        --horizontal
+createEntity("block", 100, 432, 2055, 16)--first floor
+createEntity("block", 476, 337, 529, 17)--first hallway ceiling left to right
+createEntity("block", 1095, 337, 99, 17)
+createEntity("block", 1471, 337, 368, 17)
+createEntity("block", 1178, 282, 309, 17)--library ceiling
+createEntity("block", 100, 266, 2055, 16)--second floor and some roof
+createEntity("block", 476, 171, 402, 17)--second hallway ceiling left to right
+createEntity("block", 1178, 171, 661, 17)
+createEntity("block", 862, 100, 332, 16)--small commons ceiling
+        --vertical
+createEntity("block", 100, 266, 16, 182)--pillar
+createEntity("block", 160, 266, 16, 129)--main commons wall left
+createEntity("block", 476, 171, 16, 224)--main commons wall left and second wall left
+createEntity("block", 989, 266, 16, 88)--ramp walls left to right
+createEntity("block", 1095, 266, 16, 88)
+createEntity("block", 1178, 266, 16, 129)--library walls left to right
+createEntity("block", 1471, 266, 16, 129)
+createEntity("block", 1823, 171, 16, 224)--gym wall left and second wall right
+createEntity("block", 2139, 266, 16, 182)--gym wall right
+createEntity("block", 862, 100, 16, 88)--small commons left to right
+createEntity("block", 1178, 100, 16, 88)
+createEntity("block", 1637, 171, 16, 58)--bathroom wall
+        --cafeteria
+createEntity("block", 0, (166 + 1000), 472, 16)--floor
+createEntity("block", 316, (71 + 1000), 156, 17)
+createEntity("block", 0, (0 + 1000), 472, 16)--roof
+createEntity("block", 0, (0 + 1000), 16, 129)
+createEntity("block", 316, (0 + 1000), 16, 129)
+createEntity("block", 456, (0 + 1000), 16, 182)
 
 --entities
-  --1st floor
-    --large commons
-createEntity("object", 176 * sizeMultiplier, 282 * sizeMultiplier, "ceilingLights", false, true)
-createEntity("object", 192 * sizeMultiplier, 432 * sizeMultiplier, "glassOffice", true, false)
-createEntity("object", 321 * sizeMultiplier, (432 * sizeMultiplier) - getAnimationHeight("officeHole"), "officeHole", true, false)
-createEntity("stickerRoll", 449 * sizeMultiplier, 432 * sizeMultiplier)
-    --first hallway
+    --1st floor
+        --large commons
+createEntity("object", 176 , 282, "ceilingLights", false, true)
+createEntity("object", 192, 432 , "glassOffice", true, false)
+createEntity("object", 321 , 432 - (getAnimationHeight("officeHole") / sizeMultiplier), "officeHole", true, false)
+createEntity("stickerRoll", 449, 432)
+        --first hallway
 for i = 0,5 + rand() % 10 do
-  createEntity("poster", 492 * sizeMultiplier, 354 * sizeMultiplier, 497 * sizeMultiplier, 41 * sizeMultiplier)
+    createEntity("poster", 492, 354, 497, 41)
 end
-createEntity("animatedTeleporter", 508 * sizeMultiplier, 432 * sizeMultiplier, 16 * sizeMultiplier, (166 + 1000) * sizeMultiplier, "door", true)--cafeteria doors
+createEntity("animatedTeleporter", 508, 432, 16, 166 + 1000, "door", true)--cafeteria doors
 for j = 0,1 do
-  for i = 0,10 do
-    createEntity("object", (660 * sizeMultiplier) + (i * getAnimationWidth("locker")) + (j * getAnimationWidth("locker") * 11) + (j * 100), (432 * sizeMultiplier), "locker", true, false)
-  end
+    for i = 0,10 do
+        createEntity("object", (660) + (i * getAnimationWidth("locker")) / sizeMultiplier + (j * getAnimationWidth("locker") * 11) / sizeMultiplier + (j * 33), 432, "locker", true, false)
+    end
 end
-createEntity("object", 950 * sizeMultiplier, 432 * sizeMultiplier, "waterFountain", true, false)
-createEntity("object", 970 * sizeMultiplier, 432 * sizeMultiplier, "waterFountain", true, false)
-createEntity("teleporter", 1005 * sizeMultiplier, 432 * sizeMultiplier, 90 * sizeMultiplier, 150 * sizeMultiplier, 1047 * sizeMultiplier, 266 * sizeMultiplier, false)--ramp
-createEntity("teleporter", 1005 * sizeMultiplier, 266 * sizeMultiplier, 90 * sizeMultiplier, 27 * sizeMultiplier, 1051 * sizeMultiplier, 432 * sizeMultiplier, false)--ramp
-createEntity("item", 1127 * sizeMultiplier, 432 * sizeMultiplier, "pottedPlant")
-    --library
-    --hallway before gym
-createEntity("object", 1768 * sizeMultiplier, 432 * sizeMultiplier, "waterFountain", true, false)
-createEntity("object", 1788 * sizeMultiplier, 432 * sizeMultiplier, "waterFountain", true, false)
+createEntity("object", 950, 432, "waterFountain", true, false)
+createEntity("object", 970, 432, "waterFountain", true, false)
+createEntity("teleporter", 1005, 432, 90, 150, 1047, 266, false)--ramp
+createEntity("teleporter", 1005, 266, 90, 27, 1051, 432, false)--ramp
+createEntity("item", 1127, 432, "pottedPlant")
+        --library
+        --hallway before gym
+createEntity("object", 1768, 432, "waterFountain", true, false)
+createEntity("object", 1788, 432, "waterFountain", true, false)
 for i = 0,2 do
-  createEntity("object", (1503 * sizeMultiplier) + (i * getAnimationWidth("trophyCase")) + (i * 100), (432 * sizeMultiplier), "trophyCase", true, false)
+    createEntity("object", 1503 + (i * getAnimationWidth("trophyCase")) / sizeMultiplier + (i * 33), 432, "trophyCase", true, false)
 end
-    --gym
-createEntity("basketBall", 2012 * sizeMultiplier, 432 * sizeMultiplier)
-createEntity("basketBallHoop", 1883 * sizeMultiplier, 336 * sizeMultiplier)
-createEntity("basketBallHoop", 2067 * sizeMultiplier, 336 * sizeMultiplier)
+        --gym
+createEntity("basketBall", 2012, 432)
+createEntity("basketBallHoop", 1883, 336)
+createEntity("basketBallHoop", 2067, 336)
 
-  --2nd floor
-    --first hallway
+    --2nd floor
+        --first hallway
 for i = 0,5 + rand() % 10 do
-  createEntity("poster", 492 * sizeMultiplier, 188 * sizeMultiplier, 386 * sizeMultiplier, 41 * sizeMultiplier)
+    createEntity("poster", 492, 188, 386, 41)
 end
 for j = 0,1 do
-  for i = 0,10 do
-    createEntity("object", (508 * sizeMultiplier) + (i * getAnimationWidth("locker")) + (j * getAnimationWidth("locker") * 11) + (j * 100), (266 * sizeMultiplier), "locker", true, false)
-  end
+    for i = 0,10 do
+        createEntity("object", (508) + (i * getAnimationWidth("locker")) / sizeMultiplier + (j * getAnimationWidth("locker") * 11) / sizeMultiplier + (j * 33), 266, "locker", true, false)
+    end
 end
-createEntity("object", 805 * sizeMultiplier, 266 * sizeMultiplier, "waterFountain", true, false)
-createEntity("object", 825 * sizeMultiplier, 266 * sizeMultiplier, "waterFountain", true, false)
-    --small commons
-    --second hallway
+createEntity("object", 805, 266, "waterFountain", true, false)
+createEntity("object", 825, 266, "waterFountain", true, false)
+        --small commons
+        --second hallway
 for i = 0,5 + rand() % 10 do
-  createEntity("poster", 1194 * sizeMultiplier, 188 * sizeMultiplier, 427 * sizeMultiplier, 41 * sizeMultiplier)
+    createEntity("poster", 1194, 188, 427, 41)
 end
 for j = 0,1 do
-  for i = 0,10 do
-    createEntity("object", (1243 * sizeMultiplier) + (i * getAnimationWidth("locker")) + (j * getAnimationWidth("locker") * 11) + (j * 100), (266 * sizeMultiplier), "locker", true, false)
-  end
+    for i = 0,10 do
+        createEntity("object", 1243 + (i * getAnimationWidth("locker")) / sizeMultiplier + (j * getAnimationWidth("locker") * 11) / sizeMultiplier + 33, (266), "locker", true, false)
+    end
 end
-createEntity("object", 1580 * sizeMultiplier, 266 * sizeMultiplier, "waterFountain", true, false)
-createEntity("object", 1600 * sizeMultiplier, 266 * sizeMultiplier, "waterFountain", true, false)
-    --restroom
+createEntity("object", 1580, 266, "waterFountain", true, false)
+createEntity("object", 1600, 266, "waterFountain", true, false)
+        --restroom
 
-  --cafeteria
+    --cafeteria
 for i = 0,2 do
-    createEntity("object", ((32 + (i * 16)) * sizeMultiplier) + (i * getAnimationWidth("lunchTable")), (1000 + 166) * sizeMultiplier, "lunchTable", true, false)
+    createEntity("object", (48 + (i * 16)) + (i * getAnimationWidth("lunchTable")) / sizeMultiplier, 1000 + 166, "lunchTable", true, false)
 end
