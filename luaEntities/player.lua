@@ -103,7 +103,7 @@ function create(x, y)
     addEntityValue(entity, "holdingItem", "entity")
     addEntityFunction(entity, "update", "void")
     addEntityToGroup(entity, "Player")
-    addEntityToRenderGroup(entity, "400Player")
+    addEntityToRenderGroup(entity, "450Player")
     return entity
 end
 

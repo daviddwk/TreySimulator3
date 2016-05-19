@@ -58,7 +58,8 @@ createEntity("stickerRoll", 449, 432)
 for i = 0,5 + rand() % 10 do
     createEntity("poster", 492, 354, 497, 41)
 end
-createEntity("animatedTeleporter", 508, 432, 16, 166 + 1000, "door", true)--cafeteria doors
+createEntity("animatedTeleporter", 540, 432, 16, 166 + 1000, "cafeteriaDoor", true)--cafeteria doors
+createEntity("object", 614, 432, "barrelTrashCan",true, false)
 for j = 0,1 do
     for i = 0,10 do
         createEntity("object", (660) + (i * getAnimationWidth("locker")) / sizeMultiplier + (j * getAnimationWidth("locker") * 11) / sizeMultiplier + (j * 33), 432, "locker", true, false)
