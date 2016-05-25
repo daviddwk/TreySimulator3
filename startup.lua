@@ -112,3 +112,6 @@ createEntity("object", 1600, 266, "waterFountain", true, false)
 for i = 0,2 do
     createEntity("object", (48 + (i * 16)) + (i * getAnimationWidth("lunchTable")) / sizeMultiplier, 1000 + 166, "lunchTable", true, false)
 end
+
+createEntity("electricFeild", 260, 250, 122, 112)
+createEntity("electronEmitterButton", 190, 432, 164, 346)

@@ -36,18 +36,18 @@ end
 function pickUpHandle(pressed)
     if pressed then
         player = getGlobalValue("player")
-            if getEntityValue(player, "holdingItem") == getNullEntity() then
-                if entityStaticCollidesWithGroup(player, 0, "Items", 0) then
-                    function getItems(object)
-                        if entityStaticCollidesWithEntity(player, 0, object, 0) then
-                            setEntityValue(player, "holdingItem", object)
-                        end
+        if getEntityValue(player, "holdingItem") == getNullEntity() then
+            if entityStaticCollidesWithGroup(player, 0, "Items", 0) then
+                function getItems(object)
+                    if entityStaticCollidesWithEntity(player, 0, object, 0) then
+                        setEntityValue(player, "holdingItem", object)
                     end
-                    forEachEntityInGroup("Items", "getItems")
                 end
-            else
-                setEntityValue(player, "holdingItem", getNullEntity())
+                forEachEntityInGroup("Items", "getItems")
             end
+        else
+            setEntityValue(player, "holdingItem", getNullEntity())
+        end
     end
 end
 
@@ -73,6 +73,13 @@ function useHandle(pressed)
             forEachEntityInGroup("AnimatedTeleporters", "teleport")
         elseif getEntityValue(player, "holdingItem") ~= getNullEntity() then
             callEntityFunction(getEntityValue(player, "holdingItem"), "action")
+        elseif entityStaticCollidesWithGroup(player, 0, "Buttons", 0) then
+            function pressButton(button)
+                if entityStaticCollidesWithEntity(player, 0, button, 0) then
+                    callEntityFunction(button, "press")
+                end
+            end
+            forEachEntityInGroup("Buttons", "pressButton")
         end
     end
 end

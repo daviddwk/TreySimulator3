@@ -11,8 +11,8 @@ function create(x, y)
     setEntityRenderWidth(entity, getAnimationWidth("basketBallHoop"))
     setEntityRenderHeight(entity, getAnimationHeight("basketBallHoop"))
     addEntityFunction(entity, "dunk", "void")
-    addEntityToGroup(entity, "basketBallHoop")
-    addEntityToRenderGroup(entity, "390basketBallHoop")
+    addEntityToGroup(entity, "BasketBallHoops")
+    addEntityToRenderGroup(entity, "390BasketBallHoops")
     return entity
 end
 
@@ -22,5 +22,5 @@ function dunk(entity)
             print("SCORE")
         end
     end
-    forEachEntityInGroup("basketball", "checkDunk")
+    forEachEntityInGroup("Basketballs", "checkDunk")
 end
