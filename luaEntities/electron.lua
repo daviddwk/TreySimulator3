@@ -24,24 +24,24 @@ function create(x, y, deltaX, charge)
 end
 
 function update(entity)
-    feildApplied = false
+    fieldApplied = false
 
-    function feildForce(feildEntity)
-        if entityStaticCollidesWithEntity(entity, 0, feildEntity, 0) then
-            if (getEntityValue(feildEntity, "orientation") and getEntityValue(entity, "charge")) or
-            (getEntityValue(feildEntity, "orientation") == false and getEntityValue(entity, "charge") == false) then
+    function fieldForce(fieldEntity)
+        if entityStaticCollidesWithEntity(entity, 0, fieldEntity, 0) then
+            if (getEntityValue(fieldEntity, "orientation") and getEntityValue(entity, "charge")) or
+            (getEntityValue(fieldEntity, "orientation") == false and getEntityValue(entity, "charge") == false) then
                 setEntityDeltaY(entity, getEntityDeltaY(entity) - (getDeltaTime() * getGlobalValue("gravitySpeed")))
-                feildApplied = true
+                fieldApplied = true
             else
                 setEntityDeltaY(entity, getEntityDeltaY(entity) + (getDeltaTime() * getGlobalValue("gravitySpeed")))
-                feildApplied = true
+                fieldApplied = true
             end
         end
     end
 
-    forEachEntityInGroup("ElectricFeilds", "feildForce")
+    forEachEntityInGroup("ElectricFields", "fieldForce")
 
-    if feildApplied then
+    if fieldApplied then
         setEntityValue(entity, "timeAlive", 0)
     else
         setEntityValue(entity, "timeAlive", getEntityValue(entity, "timeAlive") + getDeltaTime())

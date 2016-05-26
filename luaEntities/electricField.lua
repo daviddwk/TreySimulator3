@@ -5,8 +5,11 @@ function create(x, y, width, height)
     setEntityY(entity, y * sizeMultiplier)
     addEntityValue(entity, "orientation", "bool")
     setEntityValue(entity, "orientation", true)
-    startEntityAnimation(entity, "electricFeildUp")
+    startEntityAnimation(entity, "electricFieldUp")
+    setEntityRenderWidth(entity, width * sizeMultiplier)
+    setEntityRenderHeight(entity, height * sizeMultiplier)
     addEntityCollisionBox(entity, 0, 0, width * sizeMultiplier, height * sizeMultiplier)
-    addEntityToGroup(entity, "ElectricFeilds")
+    addEntityToGroup(entity, "ElectricFields")
+    addEntityToRenderGroup(entity, "550ElectricFields")
     return entity
 end

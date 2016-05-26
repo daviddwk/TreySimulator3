@@ -13,6 +13,7 @@ setGlobalValue("player", playerEntity)
 --background textures
 createEntity("animation", 0, 0, getAnimationWidth("school") * sizeMultiplier, getAnimationHeight("school") * sizeMultiplier, "school")
 createEntity("animation", 0, 1000 * sizeMultiplier, getAnimationWidth("cafeteria") * sizeMultiplier, getAnimationHeight("cafeteria") * sizeMultiplier, "cafeteria")
+createEntity("animation", 0, 2000 * sizeMultiplier, getAnimationWidth("physicsRoom") * sizeMultiplier, getAnimationHeight("physicsRoom") * sizeMultiplier, "physicsRoom")
 
 --collisions
     --main school
@@ -46,6 +47,11 @@ createEntity("block", 0, (0 + 1000), 472, 16)--roof
 createEntity("block", 0, (0 + 1000), 16, 129)
 createEntity("block", 316, (0 + 1000), 16, 129)
 createEntity("block", 456, (0 + 1000), 16, 182)
+        --physics
+createEntity("block", 0, 2000 + 95, 332, 16)
+createEntity("block", 0, 2000 + 0, 332, 17)
+createEntity("block", 0, 2000 + 0, 16, 111)
+createEntity("block", 316, 2000 + 0, 16, 111)
 
 --entities
     --1st floor
@@ -95,6 +101,7 @@ end
 createEntity("object", 805, 266, "waterFountain", true, false)
 createEntity("object", 825, 266, "waterFountain", true, false)
         --small commons
+createEntity("animatedTeleporter", 894, 266, 32, 95 + 2000, "door", true)
         --second hallway
 for i = 0,5 + rand() % 10 do
     createEntity("poster", 1194, 188, 427, 41)
@@ -107,11 +114,11 @@ end
 createEntity("object", 1580, 266, "waterFountain", true, false)
 createEntity("object", 1600, 266, "waterFountain", true, false)
         --restroom
-
     --cafeteria
 for i = 0,2 do
     createEntity("object", (48 + (i * 16)) + (i * getAnimationWidth("lunchTable")) / sizeMultiplier, 1000 + 166, "lunchTable", true, false)
 end
-
-createEntity("electricFeild", 260, 250, 122, 112)
-createEntity("electronEmitterButton", 190, 432, 164, 346)
+    --physics room
+createEntity("animatedTeleporter", 32, 95 + 2000, 894, 266, "door", true)
+createEntity("electronEmitterButton", 111, 95 + 2000, 111, 50 + 2000)
+createEntity("electricFieldButton", 150, 95 + 2000, 197, 17 + 2000, 78, 78)

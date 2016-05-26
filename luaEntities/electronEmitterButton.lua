@@ -9,5 +9,5 @@ end
 
 function press(entity)
     charge = rand() % 2
-    createEntity("electron", getEntityX(getEntityValue(entity, "emitter")) + getAnimationWidth("electronEmitter"), getEntityY(getEntityValue(entity, "emitter")) + (getAnimationHeight("electronEmitter") / 2) - (getAnimationHeight("electron") / 2), getGlobalValue("gravitySpeed"), charge == 0)
+    createEntity("electron", getEntityX(getEntityValue(entity, "emitter")) + getAnimationWidth("electronEmitter"), getEntityY(getEntityValue(entity, "emitter")) + (getAnimationHeight("electronEmitter") / 2) - (getAnimationHeight("electron") / 2), getGlobalValue("gravitySpeed") * ((rand() % 50) + 50) / 100, charge == 0)
 end
